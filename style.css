@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
+body {
+    font-family: 'Baloo Bhai 2', cursive;
+    padding: 0px;
+    margin: 0px;
+}
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(147, 212, 241); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b2d8df; 
+  }
+
+
+nav {
+    background-color: #b0d9eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+#logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+}
+#account{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu ul{
+    width: 100px;
+    list-style: none;
+    font-family: 'Baloo Bhai 2', cursive;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    
+}
+.dropmenu ul{
+    background-color: #b0d9eb;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 23px;
+    cursor: pointer;
+}
+.dropmenu ul li{
+    padding: 5px;
+    text-align: center;
+    transition: all 600ms;
+}
+.dropmenu ul li:hover{
+    background-color: rgb(141, 200, 214);
+}
+.menu ul:hover .dropmenu ul{
+    display: block;
+}
+
+section{
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+    height: 37vh;
+    background-color:#c1e1e9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px 0px gray;
+}
+section div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+section div input{
+    width: 80%;
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+    margin: auto;
+    margin-bottom: 10px;
+}
+section div span{
+    width: 80%;
+    margin: auto;
+}
+#addbtn{
+    width: 15%;
+    margin: auto;
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #62c5dd;
+    box-shadow: 1px 1px 4px 0px gray;
+    transition: all 300ms;
+    height: 33px;
+}
+#addbtn:hover{
+    background-color:#98ceda ;
+}
+.transaction{
+    width: 80vw;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+    border: 1px solid gray;
+    border-radius: 4px;
+    /* background-color: rgb(72, 148, 214); */
+    display: flex;
+    flex-direction: column;
+}
+.transaction h3{
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+td,th{
+    width: 30%;
+    border: none;
+    text-align: center;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 18px;
+
+}
