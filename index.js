@@ -12,8 +12,8 @@ btn.addEventListener("click", () => {
     let d = localStorage.getItem('d');
     let msg = localStorage.getItem('msg');
     let paisa =localStorage.getItem('paisa');
-    if (amount.value == "" || date.value == "" || message.value == "") {
-        alert("All fields are required!");
+    if (amount.value == "" || date.value == "" || message.value == "" ||  bal.innerText==0) {
+        alert("Either field is empty or Balance is zero");
     }
     else {
         if (a == null && d == null && msg == null) {
@@ -122,10 +122,13 @@ addbal.addEventListener('click',()=>{
 })
 
 cdata.addEventListener('click',()=>{
+    let res = confirm("Are you sure you want to clear Data?");
+    if(res){
     localStorage.removeItem("a");
     localStorage.removeItem("d");
     localStorage.removeItem("msg");
     localStorage.removeItem("paisa");
     location.reload()
+    }
 })
 
