@@ -106,13 +106,24 @@ function showtrans() {
     }
 }
 
+function allLetter(input)
+      { 
+      var letters = /^[0-9]+$/;
+      if(input.match(letters))
+      {
+      return false;
+      }
+      else
+      {
+      return true;
+      }
+      }
+
 addbal.addEventListener('click',()=>{
     paisa =localStorage.getItem('paisa');
     let value = prompt("Please enter amount:","");
-    let pattern =/([a-z]|[A-Z]|[`~!@#$%^&*()_+-{[};:'"/?><,.])/gi;
-    let res = pattern.test(value);
-    console.log(res);
-    if(res  || Number(value)< 0)
+    let res = allLetter(value);
+    if(res||Number(value)< 0)
     {
         alert("Not a valid Input");
         return;
