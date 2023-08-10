@@ -83,7 +83,7 @@ section{
     width: 40%;
     margin: auto;
     margin-top: 30px;
-    height: 37vh;
+    /* height: 37vh; */
     background-color:#c1e1e9;
     padding: 20px;
     border-radius: 10px;
@@ -110,9 +110,9 @@ section div span{
     margin: auto;
 }
 #addbtn{
-    width: 15%;
+    /* width: 15%; */
     margin: auto;
-    padding: 7px;
+    padding: 10px 35px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -150,3 +150,28 @@ td,th{
     font-size: 18px;
 
 }
+.spent{
+    width: 80vw;
+    margin: auto;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.spent span{
+    font-family:'Baloo Bhai 2', cursive ;
+    font-size: 20px;
+    border-bottom: 3px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+    section{
+        display: flex;
+        justify-content: center;
+        width: 72%;
+    }
+    section form{
+        width: 100%;
+    }
+  }

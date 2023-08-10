@@ -4,6 +4,8 @@ let message = document.getElementById("Message");
 let bal = document.getElementById("balance");
 let btn = document.getElementById("addbtn");
 let addbal = document.getElementById("addbal");
+let cdata = document.getElementById("cdata");
+
 showtrans();
 btn.addEventListener("click", () => {
     let a = localStorage.getItem('a');
@@ -85,6 +87,17 @@ function showtrans() {
     }
     let table=document.getElementById("table");
     table.innerHTML=html;
+    let totalspent=0;
+    amountobj.forEach(index => {
+        totalspent+=parseFloat(index);
+    });
+    let tspent = document.getElementById("tspent");
+    let spent = document.querySelector(".spent")
+    tspent.innerHTML = totalspent.toFixed(2);
+    if(totalspent==0)
+    {
+        spent.style.display='none';
+    }
 }
 
 addbal.addEventListener('click',()=>{
@@ -106,5 +119,13 @@ addbal.addEventListener('click',()=>{
     }
     bal.innerText = paisaobj[0];
     localStorage.setItem('paisa',JSON.stringify(paisaobj));
+})
+
+cdata.addEventListener('click',()=>{
+    localStorage.removeItem("a");
+    localStorage.removeItem("d");
+    localStorage.removeItem("msg");
+    localStorage.removeItem("paisa");
+    location.reload()
 })
 
