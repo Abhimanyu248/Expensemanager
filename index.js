@@ -109,6 +109,14 @@ function showtrans() {
 addbal.addEventListener('click',()=>{
     paisa =localStorage.getItem('paisa');
     let value = prompt("Please enter amount:","");
+    let pattern =/([a-z]|[A-Z]|[`~!@#$%^&*()_+-{[};:'"/?><,.])/gi;
+    let res = pattern.test(value);
+    console.log(res);
+    if(res  || Number(value)< 0)
+    {
+        alert("Not a valid Input");
+        return;
+    }
     if(paisa==undefined)
     {
         paisaobj=[];
