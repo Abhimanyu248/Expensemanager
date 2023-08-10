@@ -33,7 +33,13 @@ btn.addEventListener("click", () => {
         bal.innerText = leftbal;
         
         paisaobj[0]=leftbal;
-        amountobj.push(amount.value);
+        if(amount.value>0){
+            amountobj.push(amount.value);
+        }
+        else{
+            alert("Amount is less then zero");
+            return;
+        }
         dateobj.push(date.value);
         msgobj.push(message.value);
 
