@@ -159,7 +159,20 @@ td,th{
     justify-content: space-around;
 
 }
+.mspen{
+    width: 80vw;
+    margin: auto;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .spent span{
+    font-family:'Baloo Bhai 2', cursive ;
+    font-size: 20px;
+    border-bottom: 3px solid black;
+}
+.mspen span{
     font-family:'Baloo Bhai 2', cursive ;
     font-size: 20px;
     border-bottom: 3px solid black;

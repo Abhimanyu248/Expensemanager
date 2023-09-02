@@ -12,7 +12,7 @@
 
     <nav>
         <div id="logo">
-            <a href="#index">Expense Manager</a>
+            <a href="index.html">Expense Manager</a>
         </div>
         <div id="account">
             <div>
@@ -49,6 +49,10 @@
                     <span>Message</span>
                     <input type="text" name="message" id="Message" placeholder="Write Message">
                 </div>
+                <div>
+                    <span>Split</span>
+                    <input type="number" name="split" id="split" placeholder="No. of People">
+                </div>
                 <button type="submit" id="addbtn">Add</button>
             </div>
         </form>
@@ -70,6 +74,10 @@
     <div class="spent">
         <span>Total Spent</span>
         <span id="tspent">0</span>
+    </div>
+    <div class="mspen">
+        <span>My Spent</span>
+        <span id="mspent">0</span>
     </div>
 
     <script src="index.js"></script>
